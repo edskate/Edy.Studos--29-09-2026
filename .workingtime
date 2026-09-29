@@ -24,7 +24,9 @@
     },
     "data": [
         {
-            "config": false,
+            "config": {
+                "showIdle": false
+            },
             "user": "edskate",
             "dailySessions": [
                 {
@@ -396,6 +398,77 @@
                                 "filesExt": [
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page2.html",
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index.html"
+                                ]
+                            },
+                            "actionType": "Idle"
+                        },
+                        {
+                            "sessionInfo": {
+                                "id": "891c4d2d-90dd-492f-857d-f0cfc8ec49d0",
+                                "duration": 262459,
+                                "idle": 28259318,
+                                "state": "Idle",
+                                "durations": [
+                                    {
+                                        "id": "0c31e663-8842-49ce-aeae-ac6d494c6aeb",
+                                        "state": "Idle",
+                                        "begin": 1790669386842,
+                                        "end": 1790669386842,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "81d31e61-b54e-427f-b9dc-4a75c19f43de",
+                                        "state": "Ongoing",
+                                        "begin": 1790669366135,
+                                        "end": 1790669386841,
+                                        "duration": 20706
+                                    },
+                                    {
+                                        "id": "a0d37480-fff8-4c97-a57a-7742d49ef0e8",
+                                        "state": "Idle",
+                                        "begin": 1790669288739,
+                                        "end": 1790669366135,
+                                        "duration": 77396
+                                    },
+                                    {
+                                        "id": "8df7db0c-fe83-4812-8908-d595ee1e1834",
+                                        "state": "Ongoing",
+                                        "begin": 1790669196182,
+                                        "end": 1790669288739,
+                                        "duration": 92557
+                                    },
+                                    {
+                                        "id": "2d85cf9e-e817-477d-b512-e0c5b7ecf6b2",
+                                        "state": "Idle",
+                                        "begin": 1790669188212,
+                                        "end": 1790669196182,
+                                        "duration": 7970
+                                    },
+                                    {
+                                        "id": "723b9787-10b2-4803-9ba7-565fd63d9bd6",
+                                        "state": "Ongoing",
+                                        "begin": 1790669182431,
+                                        "end": 1790669188212,
+                                        "duration": 5781
+                                    },
+                                    {
+                                        "id": "75881897-a398-4367-9f9b-ee7998f67b48",
+                                        "state": "Idle",
+                                        "begin": 1790669136907,
+                                        "end": 1790669182431,
+                                        "duration": 45524
+                                    },
+                                    {
+                                        "id": "772b1315-8a9d-4575-869e-6e89fa6c0b21",
+                                        "state": "Ongoing",
+                                        "begin": 1790668993492,
+                                        "end": 1790669136907,
+                                        "duration": 143415
+                                    }
+                                ],
+                                "filesExt": [
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page3.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page2.html"
                                 ]
                             },
                             "actionType": "Idle"
