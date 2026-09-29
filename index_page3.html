@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Treino de inglês — Page 1</title>
+<style>
+:root{font-family:Arial,sans-serif;color:#f2f7f4;background:#101b1a}*{box-sizing:border-box}body{margin:0;padding:24px}main{max-width:850px;margin:auto}h1{color:#73efb1}.controls,.card{background:#1c2c29;border:1px solid #3c6254;border-radius:14px;padding:17px;margin:13px 0}button,select{border:0;border-radius:9px;padding:11px 14px;font:inherit}button{background:#66daa0;color:#102218;font-weight:bold;cursor:pointer;margin:4px}button:hover{background:#a1f6c8}button.stop{background:#ffc0a9}.en{font-size:1.22rem;font-weight:bold;margin:0 0 7px}.pt{color:#b9cfc7;margin:0 0 10px}label{display:inline-block;margin:8px}select{background:#eef8f2}.active{outline:2px solid #80ffc0}#status{min-height:1.5em;color:#a9e9c6}
+</style>
+</head>
+<body><main>
+<h1>Page 1 — Treino com narração</h1>
+<p>Toque em <strong>Ouvir</strong> para escutar a frase em inglês. Você também pode repetir cinco vezes ou ouvir a lista inteira.</p>
+<section class="controls">
+<label>Velocidade <select id="speed"><option value="0.7">Lenta</option><option value="0.9" selected>Normal para treino</option><option value="1.1">Rápida</option></select></label>
+<label>Voz <select id="voice"><option value="">Voz inglesa disponível</option></select></label><br>
+<button id="all" type="button">▶ Ouvir todas</button><button id="stop" class="stop" type="button">■ Parar áudio</button>
+<p id="status" role="status" aria-live="polite"></p>
+</section>
+<div id="phrases"></div>
+</main>
+<script>
+const phrases=[
+ ["You're warning me.","Você está me avisando."],
+ ["I don't know what to do.","Não sei o que fazer."],
+ ["I am lost.","Estou perdido."],
+ ["Without orders, they marched.","Sem ordens, eles marcharam."],
+ ["Halfway across Libya and into Egypt.","A meio caminho pela Líbia e entrando no Egito."],
+ ["All we found was sand and blood.","Tudo o que encontramos foi areia e sangue."],
+ ["Let me get your bags.","Deixe-me pegar suas malas."],
+ ["Oh no. What are you doing here?","Ah, não. O que você está fazendo aqui?"],
+ ["I'm here to protect my investment, thank you very much.","Estou aqui para proteger meu investimento, muito obrigado."],
+ ["Quit playing with your glasses.","Pare de brincar com seus óculos."],
+ ["Don't forget to lock the door.","Não se esqueça de trancar a porta."],
+ ["Without my glasses I can't see.","Sem meus óculos, não consigo enxergar."],
+ ["I need my glasses.","Preciso dos meus óculos."],
+ ["One moment.","Um momento."],
+ ["Wait a moment.","Espere um pouco."],
+ ["Sit down. We could use another player.","Sente-se. Poderíamos contar com mais um jogador."]
+];
+const synth=window.speechSynthesis, list=document.getElementById('phrases'),status=document.getElementById('status'),voiceSelect=document.getElementById('voice');
+let voices=[],run=0;
+phrases.forEach(([en,pt],i)=>{const card=document.createElement('section');card.className='card';const a=document.createElement('p');a.className='en';a.textContent=(i+1)+'. '+en;const b=document.createElement('p');b.className='pt';b.textContent=pt;card.append(a,b);for(const [label,count] of [['▶ Ouvir',1],['↻ Repetir 5 vezes',5]]){const button=document.createElement('button');button.type='button';button.textContent=label;button.onclick=()=>play([i],count);card.append(button)}list.append(card)});
+function loadVoices(){if(!synth)return;voices=synth.getVoices().filter(v=>/^en[-_]/i.test(v.lang));const previous=voiceSelect.value;voiceSelect.replaceChildren(new Option('Voz inglesa disponível',''));voices.forEach((v,i)=>voiceSelect.add(new Option(`${v.name} (${v.lang})`,String(i))));if([...voiceSelect.options].some(o=>o.value===previous))voiceSelect.value=previous}
+if(synth){loadVoices();synth.addEventListener?.('voiceschanged',loadVoices)}
+function stop(){run++;synth?.cancel();document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));status.textContent='Áudio parado.'}
+function play(indices,repeats){if(!synth){status.textContent='Este navegador não oferece narração por voz.';return}stop();const token=run;let step=0;function next(){if(token!==run)return;if(step>=indices.length*repeats){document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));status.textContent='Treino concluído.';return}const index=indices[Math.floor(step/repeats)],attempt=step%repeats+1;document.querySelectorAll('.card').forEach((c,i)=>c.classList.toggle('active',i===index));status.textContent=`Frase ${index+1} de ${phrases.length} — repetição ${attempt} de ${repeats}`;const utterance=new SpeechSynthesisUtterance(phrases[index][0]);utterance.lang='en-US';utterance.rate=Number(document.getElementById('speed').value);utterance.pitch=1;const chosen=voices[Number(voiceSelect.value)];if(voiceSelect.value!==''&&chosen)utterance.voice=chosen;utterance.onend=()=>{step++;next()};utterance.onerror=e=>{if(token!==run)return;status.textContent='Não foi possível reproduzir o áudio. Verifique as vozes do navegador.'};synth.speak(utterance)}next()}
+document.getElementById('all').onclick=()=>play(phrases.map((_,i)=>i),1);document.getElementById('stop').onclick=stop;
+</script>
+</body>
+</html>
