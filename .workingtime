@@ -1,0 +1,126 @@
+{
+    "extConfig": {
+        "enums": [
+            {
+                "name": "ActionType",
+                "values": [
+                    "Building",
+                    "Codding",
+                    "Debugging",
+                    "Documenting",
+                    "Idle",
+                    "Testing"
+                ]
+            },
+            {
+                "name": "SessionState",
+                "values": [
+                    "Ongoing",
+                    "Idle",
+                    "Ended"
+                ]
+            }
+        ]
+    },
+    "data": [
+        {
+            "config": false,
+            "user": "edskate",
+            "dailySessions": [
+                {
+                    "date": "Tue Sep 29 2026",
+                    "sessions": [
+                        {
+                            "sessionInfo": {
+                                "id": "4506a6b8-cab5-4adb-99fa-4629eec0e968",
+                                "duration": 963904,
+                                "idle": 1019428,
+                                "state": "Idle",
+                                "durations": [
+                                    {
+                                        "id": "1eeba9ee-4af2-4361-b2fd-4a68ddc9fc77",
+                                        "state": "Idle",
+                                        "begin": 1790661467894,
+                                        "end": 1790661467894,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "0c8f312f-5e6c-4571-904a-5ea3d9446d3a",
+                                        "state": "Ongoing",
+                                        "begin": 1790661172789,
+                                        "end": 1790661467894,
+                                        "duration": 295105
+                                    },
+                                    {
+                                        "id": "42b70847-0840-44f4-8d0e-88ec0cdce1f7",
+                                        "state": "Idle",
+                                        "begin": 1790661167898,
+                                        "end": 1790661172789,
+                                        "duration": 4891
+                                    },
+                                    {
+                                        "id": "95696006-262e-4607-b32a-a3146556ea8c",
+                                        "state": "Ongoing",
+                                        "begin": 1790660948361,
+                                        "end": 1790661167898,
+                                        "duration": 219537
+                                    },
+                                    {
+                                        "id": "e51b5e3d-3bd2-47ce-bdec-2b19ae900fe5",
+                                        "state": "Idle",
+                                        "begin": 1790660941505,
+                                        "end": 1790660948361,
+                                        "duration": 6856
+                                    },
+                                    {
+                                        "id": "4361fd13-e7ea-4786-9f4e-f06186e9da05",
+                                        "state": "Ongoing",
+                                        "begin": 1790660869508,
+                                        "end": 1790660941505,
+                                        "duration": 71997
+                                    },
+                                    {
+                                        "id": "26fc6ae0-15e5-4532-b29f-5367c2e8b99b",
+                                        "state": "Idle",
+                                        "begin": 1790660867879,
+                                        "end": 1790660869508,
+                                        "duration": 1629
+                                    },
+                                    {
+                                        "id": "123d3e5a-3c5e-4634-9d78-2e88a5b979ac",
+                                        "state": "Ongoing",
+                                        "begin": 1790660587259,
+                                        "end": 1790660867878,
+                                        "duration": 280619
+                                    },
+                                    {
+                                        "id": "f458d33d-20d9-4a49-b125-ea6f54bb2a57",
+                                        "state": "Idle",
+                                        "begin": 1790660545967,
+                                        "end": 1790660587259,
+                                        "duration": 41292
+                                    },
+                                    {
+                                        "id": "5fa503e6-1465-4dd7-9d59-a20073eb7ef6",
+                                        "state": "Ongoing",
+                                        "begin": 1790660449321,
+                                        "end": 1790660545967,
+                                        "duration": 96646
+                                    }
+                                ],
+                                "filesExt": [
+                                    "",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page1.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\style.css",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page2.html"
+                                ]
+                            },
+                            "actionType": "Idle"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
