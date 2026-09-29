@@ -33,16 +33,37 @@
                         {
                             "sessionInfo": {
                                 "id": "4506a6b8-cab5-4adb-99fa-4629eec0e968",
-                                "duration": 963904,
-                                "idle": 1019428,
-                                "state": "Idle",
+                                "duration": 1297815,
+                                "idle": 1918594,
+                                "state": "Ongoing",
                                 "durations": [
+                                    {
+                                        "id": "13740c17-ba73-4d10-be89-dd5288e747ff",
+                                        "state": "Ongoing",
+                                        "begin": 1790662085386,
+                                        "end": 1790662085386,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "c3d15cbc-a89b-41e8-84ab-cff78ceacda8",
+                                        "state": "Idle",
+                                        "begin": 1790661520349,
+                                        "end": 1790662085386,
+                                        "duration": 565037
+                                    },
+                                    {
+                                        "id": "6859554d-2b8b-49c2-a9e3-44172c94215a",
+                                        "state": "Ongoing",
+                                        "begin": 1790661468968,
+                                        "end": 1790661520349,
+                                        "duration": 51381
+                                    },
                                     {
                                         "id": "1eeba9ee-4af2-4361-b2fd-4a68ddc9fc77",
                                         "state": "Idle",
                                         "begin": 1790661467894,
-                                        "end": 1790661467894,
-                                        "duration": 0
+                                        "end": 1790661468968,
+                                        "duration": 1074
                                     },
                                     {
                                         "id": "0c8f312f-5e6c-4571-904a-5ea3d9446d3a",
@@ -116,7 +137,7 @@
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page2.html"
                                 ]
                             },
-                            "actionType": "Idle"
+                            "actionType": "Codding"
                         }
                     ]
                 }
