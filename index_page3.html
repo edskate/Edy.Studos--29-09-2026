@@ -47,5 +47,8 @@ function stop(){run++;synth?.cancel();document.querySelectorAll('.card').forEach
 function play(indices,repeats){if(!synth){status.textContent='Este navegador não oferece narração por voz.';return}stop();const token=run;let step=0;function next(){if(token!==run)return;if(step>=indices.length*repeats){document.querySelectorAll('.card').forEach(c=>c.classList.remove('active'));status.textContent='Treino concluído.';return}const index=indices[Math.floor(step/repeats)],attempt=step%repeats+1;document.querySelectorAll('.card').forEach((c,i)=>c.classList.toggle('active',i===index));status.textContent=`Frase ${index+1} de ${phrases.length} — repetição ${attempt} de ${repeats}`;const utterance=new SpeechSynthesisUtterance(phrases[index][0]);utterance.lang='en-US';utterance.rate=Number(document.getElementById('speed').value);utterance.pitch=1;const chosen=voices[Number(voiceSelect.value)];if(voiceSelect.value!==''&&chosen)utterance.voice=chosen;utterance.onend=()=>{step++;next()};utterance.onerror=e=>{if(token!==run)return;status.textContent='Não foi possível reproduzir o áudio. Verifique as vozes do navegador.'};synth.speak(utterance)}next()}
 document.getElementById('all').onclick=()=>play(phrases.map((_,i)=>i),1);document.getElementById('stop').onclick=stop;
 </script>
+<hr>
+<a href="index_page4.html">Go back to Page 2 practice english</a>
 </body>
+
 </html>

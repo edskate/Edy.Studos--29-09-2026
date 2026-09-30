@@ -378,7 +378,7 @@
                                 "id": "6d0b2555-bf9e-43a5-8833-ebbbc47d066c",
                                 "duration": 4721,
                                 "idle": 4930,
-                                "state": "Idle",
+                                "state": "Ended",
                                 "durations": [
                                     {
                                         "id": "79ad2f8b-b0c5-4024-90b4-a49688f40aad",
@@ -406,7 +406,7 @@
                             "sessionInfo": {
                                 "id": "891c4d2d-90dd-492f-857d-f0cfc8ec49d0",
                                 "duration": 262459,
-                                "idle": 28259318,
+                                "idle": 67354481,
                                 "state": "Idle",
                                 "durations": [
                                     {
