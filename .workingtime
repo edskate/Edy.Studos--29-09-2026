@@ -24,9 +24,7 @@
     },
     "data": [
         {
-            "config": {
-                "showIdle": false
-            },
+            "config": false,
             "user": "edskate",
             "dailySessions": [
                 {
@@ -469,6 +467,40 @@
                                 "filesExt": [
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page3.html",
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page2.html"
+                                ]
+                            },
+                            "actionType": "Idle"
+                        }
+                    ]
+                },
+                {
+                    "date": "Wed Sep 30 2026",
+                    "sessions": [
+                        {
+                            "sessionInfo": {
+                                "id": "5411f1e4-eb02-46cf-b8df-f1b9102d3d23",
+                                "duration": 220754,
+                                "idle": 520771,
+                                "state": "Idle",
+                                "durations": [
+                                    {
+                                        "id": "cfbcc44d-653e-4d70-a4a9-de5c11501b4b",
+                                        "state": "Idle",
+                                        "begin": 1790793957078,
+                                        "end": 1790793957078,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "87d19735-c24f-4c06-8783-25b2b293558e",
+                                        "state": "Ongoing",
+                                        "begin": 1790793736324,
+                                        "end": 1790793957078,
+                                        "duration": 220754
+                                    }
+                                ],
+                                "filesExt": [
+                                    "",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\project.kanban.md"
                                 ]
                             },
                             "actionType": "Idle"
