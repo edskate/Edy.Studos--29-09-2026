@@ -92,31 +92,54 @@ button:hover{filter:brightness(1.12)}
 }
 .image-viewer{
     display:none;
-    margin-top:16px;
+    position:fixed;
+    left:50%;
+    bottom:calc(10px + env(safe-area-inset-bottom));
+    transform:translateX(-50%);
+    width:min(94vw,760px);
+    max-height:48vh;
+    z-index:9999;
     text-align:center;
-    background:#fff;
-    border-radius:16px;
-    padding:14px;
+    background:#ffffff;
+    border-radius:18px;
+    padding:10px;
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+    border:2px solid #243b7b;
 }
 .image-viewer.show{display:block}
 .image-viewer img{
     width:100%;
-    max-width:760px;
-    height:360px;
-    object-fit:cover;
-    border-radius:14px;
+    max-width:100%;
+    height:min(30vh,260px);
+    object-fit:contain;
+    border-radius:12px;
     border:1px solid #d1d5db;
+    background:#f8fafc;
 }
 .image-caption{
-    margin-top:10px;
-    font-size:22px;
+    margin-top:8px;
+    font-size:19px;
     font-weight:bold;
     color:#152657;
+    line-height:1.2;
 }
 .image-translation{
-    font-size:18px;
+    font-size:16px;
     color:#374151;
-    margin-top:4px;
+    margin-top:3px;
+    line-height:1.25;
+}
+.close-photo{
+    position:absolute;
+    top:6px;
+    right:6px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    padding:0;
+    font-size:18px;
+    background:#b91c1c;
+    z-index:2;
 }
 .category{
     grid-column:1/-1;
@@ -202,22 +225,56 @@ button:hover{filter:brightness(1.12)}
         padding:10px 12px;
     }
     .image-viewer{
-        padding:10px;
-    }
-    .image-viewer img{
-        width:100%;
-        height:auto;
-        max-height:55vh;
-        object-fit:contain;
-    }
-    .image-caption{
-        font-size:19px;
-        line-height:1.3;
-    }
-    .image-translation{
-        font-size:16px;
-        line-height:1.35;
-    }
+    display:none;
+    position:fixed;
+    left:50%;
+    bottom:calc(10px + env(safe-area-inset-bottom));
+    transform:translateX(-50%);
+    width:min(94vw,760px);
+    max-height:48vh;
+    z-index:9999;
+    text-align:center;
+    background:#ffffff;
+    border-radius:18px;
+    padding:10px;
+    box-shadow:0 12px 35px rgba(0,0,0,.35);
+    border:2px solid #243b7b;
+}
+.image-viewer.show{display:block}
+.image-viewer img{
+    width:100%;
+    max-width:100%;
+    height:min(30vh,260px);
+    object-fit:contain;
+    border-radius:12px;
+    border:1px solid #d1d5db;
+    background:#f8fafc;
+}
+.image-caption{
+    margin-top:8px;
+    font-size:19px;
+    font-weight:bold;
+    color:#152657;
+    line-height:1.2;
+}
+.image-translation{
+    font-size:16px;
+    color:#374151;
+    margin-top:3px;
+    line-height:1.25;
+}
+.close-photo{
+    position:absolute;
+    top:6px;
+    right:6px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    padding:0;
+    font-size:18px;
+    background:#b91c1c;
+    z-index:2;
+}
 }
     .image-viewer img{height:250px}
 }
@@ -308,9 +365,10 @@ input[type="range"]{
     <span id="speedValue">0.8x</span>
 </div>
 
-<div class="status" id="status">Clique em “Ouvir” para começar.</div>
+<div class="status" id="status">Clique em “Ouvir”. A foto aparecerá flutuando na mesma tela.</div>
 
 <div class="image-viewer" id="imageViewer">
+    <button class="close-photo" onclick="closePhoto()" aria-label="Fechar foto">✕</button>
     <img id="phraseImage" alt="Imagem relacionada à frase">
     <div class="image-caption" id="imageCaption"></div>
     <div class="image-translation" id="imageTranslation"></div>
@@ -386,7 +444,6 @@ function highlight(i){
     const el = document.getElementById("card-"+i);
     if(el){
         el.classList.add("active");
-        el.scrollIntoView({behavior:"smooth",block:"center"});
     }
 }
 
@@ -409,6 +466,10 @@ function showPhraseImage(i){
         this.onerror = null;
         this.src = "https://placehold.co/900x520/e8edf7/1e2b57?text=" + encodeURIComponent(p.pt);
     };
+}
+
+function closePhoto(){
+    document.getElementById("imageViewer").classList.remove("show");
 }
 
 function speakPhrase(i){
@@ -483,7 +544,6 @@ function stopSpeech(){
 render();
 showSpeed();
 </script>
-<hr>
-<a href="expressoes_uteis_foto_flutuante_mobile.html"><h2>Expressões Úteis Foto Flutuante Mobile</h2></a>
+
 </body>
 </html>
