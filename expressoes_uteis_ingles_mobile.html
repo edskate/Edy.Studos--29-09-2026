@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>Expressões Úteis em Inglês</title>
 
 <style>
@@ -129,14 +129,162 @@ button:hover{filter:brightness(1.12)}
     text-align:center;
 }
 @media(max-width:760px){
-    .grid{grid-template-columns:1fr}
+    header{
+        padding:18px 12px;
+    }
+    header h1{
+        font-size:28px;
+    }
+    header p{
+        font-size:15px;
+    }
+    .container{
+        margin:14px auto;
+        padding:0 10px 30px;
+    }
+    .controls{
+        padding:12px;
+        border-radius:12px;
+    }
+    .controls-row{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+    }
+    .controls-row button{
+        width:100%;
+        font-size:14px;
+        padding:10px 8px;
+    }
+    .controls-row label{
+        grid-column:1/2;
+        align-self:center;
+        font-size:14px;
+    }
+    .controls-row input[type="range"]{
+        grid-column:2/3;
+        width:100%;
+    }
+    #speedValue{
+        grid-column:1/-1;
+        text-align:center;
+        font-weight:bold;
+    }
+    .status{
+        font-size:14px;
+        line-height:1.4;
+    }
+    .grid{
+        grid-template-columns:1fr;
+        gap:12px;
+    }
+    .card{
+        padding:14px;
+        border-radius:12px;
+    }
+    .portuguese{
+        font-size:16px;
+    }
+    .english{
+        font-size:21px;
+        line-height:1.25;
+    }
+    .pronunciation{
+        font-size:17px;
+        line-height:1.35;
+    }
+    .card button{
+        width:100%;
+        font-size:16px;
+    }
+    .category{
+        font-size:18px;
+        padding:10px 12px;
+    }
+    .image-viewer{
+        padding:10px;
+    }
+    .image-viewer img{
+        width:100%;
+        height:auto;
+        max-height:55vh;
+        object-fit:contain;
+    }
+    .image-caption{
+        font-size:19px;
+        line-height:1.3;
+    }
+    .image-translation{
+        font-size:16px;
+        line-height:1.35;
+    }
+}
     .image-viewer img{height:250px}
 }
+
+@media(max-width:390px){
+    .controls-row{
+        grid-template-columns:1fr;
+    }
+    .controls-row label,
+    .controls-row input[type="range"],
+    #speedValue{
+        grid-column:1;
+    }
+    header h1{
+        font-size:24px;
+    }
+    .english{
+        font-size:19px;
+    }
+    .pronunciation{
+        font-size:16px;
+    }
+    .portuguese{
+        font-size:15px;
+    }
+}
+
 @media print{
     .controls,button,.image-viewer{display:none!important}
     body{background:white}
     .card{box-shadow:none;border:1px solid #ccc}
 }
+
+html,body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden;
+}
+body{
+    padding-left:env(safe-area-inset-left);
+    padding-right:env(safe-area-inset-right);
+}
+img{
+    max-width:100%;
+    height:auto;
+}
+.container{
+    width:100%;
+}
+.controls-row{
+    width:100%;
+}
+.controls-row button{
+    flex:0 1 auto;
+}
+input[type="range"]{
+    max-width:100%;
+}
+.card{
+    min-width:0;
+    overflow-wrap:anywhere;
+}
+.english,.portuguese,.pronunciation{
+    overflow-wrap:anywhere;
+    word-break:normal;
+}
+
 </style>
 </head>
 
