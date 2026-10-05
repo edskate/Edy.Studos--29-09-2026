@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expressões Úteis em Inglês</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#eef2f7;
+    color:#1f2937;
+}
+header{
+    background:#1e2b57;
+    color:#fff;
+    padding:24px 16px;
+    text-align:center;
+}
+header h1{margin:0 0 8px;font-size:clamp(28px,5vw,42px)}
+header p{margin:0;color:#dbe4ff}
+.container{
+    max-width:1100px;
+    margin:24px auto;
+    padding:0 16px 40px;
+}
+.controls{
+    background:#fff;
+    border-radius:16px;
+    padding:16px;
+    margin-bottom:20px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+.controls-row{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    align-items:center;
+}
+button{
+    border:none;
+    border-radius:10px;
+    padding:11px 15px;
+    font-weight:bold;
+    cursor:pointer;
+    background:#243b7b;
+    color:white;
+}
+button:hover{filter:brightness(1.12)}
+.stop{background:#b91c1c}
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:16px;
+}
+.card{
+    background:#fff;
+    border-radius:16px;
+    padding:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    border-left:6px solid #263c7a;
+}
+.portuguese{
+    font-size:18px;
+    font-weight:bold;
+    color:#374151;
+    margin-bottom:7px;
+}
+.english{
+    font-size:24px;
+    font-weight:bold;
+    color:#152657;
+    margin-bottom:7px;
+}
+.pronunciation{
+    font-size:19px;
+    color:#c2410c;
+    font-style:italic;
+    margin-bottom:13px;
+}
+.status{
+    margin-top:14px;
+    padding:10px;
+    border-radius:10px;
+    background:#eef2ff;
+    font-weight:bold;
+}
+.active{
+    outline:3px solid #22c55e;
+}
+.image-viewer{
+    display:none;
+    margin-top:16px;
+    text-align:center;
+    background:#fff;
+    border-radius:16px;
+    padding:14px;
+}
+.image-viewer.show{display:block}
+.image-viewer img{
+    width:100%;
+    max-width:760px;
+    height:360px;
+    object-fit:cover;
+    border-radius:14px;
+    border:1px solid #d1d5db;
+}
+.image-caption{
+    margin-top:10px;
+    font-size:22px;
+    font-weight:bold;
+    color:#152657;
+}
+.image-translation{
+    font-size:18px;
+    color:#374151;
+    margin-top:4px;
+}
+.category{
+    grid-column:1/-1;
+    background:#cbd5e1;
+    color:#172554;
+    padding:12px 16px;
+    font-size:22px;
+    font-weight:bold;
+    border-radius:12px;
+    text-align:center;
+}
+@media(max-width:760px){
+    .grid{grid-template-columns:1fr}
+    .image-viewer img{height:250px}
+}
+@media print{
+    .controls,button,.image-viewer{display:none!important}
+    body{background:white}
+    .card{box-shadow:none;border:1px solid #ccc}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Expressões Úteis</h1>
+<p>Ouça, repita e associe a frase à imagem.</p>
+</header>
+
+<main class="container">
+
+<section class="controls">
+<div class="controls-row">
+    <button onclick="speakAll()">🔊 Ouvir tudo</button>
+    <button class="stop" onclick="stopSpeech()">⏹ Parar</button>
+    <button onclick="window.print()">🖨 Salvar em PDF</button>
+
+    <label for="speed"><strong>Velocidade:</strong></label>
+    <input id="speed" type="range" min="0.5" max="1.2" step="0.1" value="0.8" oninput="showSpeed()">
+    <span id="speedValue">0.8x</span>
+</div>
+
+<div class="status" id="status">Clique em “Ouvir” para começar.</div>
+
+<div class="image-viewer" id="imageViewer">
+    <img id="phraseImage" alt="Imagem relacionada à frase">
+    <div class="image-caption" id="imageCaption"></div>
+    <div class="image-translation" id="imageTranslation"></div>
+</div>
+</section>
+
+<section class="grid" id="phrases"></section>
+
+</main>
+
+<script>
+const phrases = [
+{pt:"Meu nome é...", en:"My name is...", pron:"MAI NÊIM IZ...", img:"person introducing themselves"},
+{pt:"Como se chama? / Qual é o seu nome?", en:"What is your name?", pron:"UÓT IZ IÓR NÊIM?", img:"people introducing themselves"},
+{pt:"Prazer em conhecê-lo(a)!", en:"Pleased to meet you!", pron:"PLÍZD TÚ MÍT IÚ!", img:"people meeting handshake"},
+{pt:"Como está?", en:"How are you?", pron:"RÁU AR IÚ?", img:"friends talking"},
+{pt:"Que tal? E aí?", en:"How are you?", pron:"RÁU AR IÚ?", img:"friends greeting casual"},
+{pt:"Bem, obrigado. E você?", en:"Fine, thanks. And you?", pron:"FÁIN, THÉNKS. ÉND IÚ?", img:"happy conversation"},
+
+{category:"GERAL"},
+
+{pt:"Você fala inglês?", en:"Do you speak English?", pron:"DU IÚ SPÍK ÍN-GLISH?", img:"people speaking english"},
+{pt:"Não compreendo", en:"I don't understand", pron:"AI DÔUNT ÂNDER-STÉND", img:"confused person"},
+{pt:"Por favor, fale devagar", en:"Please speak slowly", pron:"PLÍZ SPÍK SLÔU-LI", img:"slow conversation"},
+{pt:"Pode repetir, por favor?", en:"Please repeat that", pron:"PLÍZ RIPÍT DÉT", img:"person asking repeat"},
+{pt:"Pode escrever isso, por favor?", en:"Please write it down", pron:"PLÍZ RÁIT IT DÁUN", img:"writing note paper"},
+{pt:"Com licença, por favor", en:"Excuse me, please", pron:"IKSKIÚZ MÍ, PLÍZ", img:"person asking politely"},
+{pt:"Você pode me ajudar?", en:"Could you help me?", pron:"CÚD IÚ RÉLP MÍ?", img:"person helping another"},
+{pt:"Caixa", en:"Till / Cash Desk", pron:"TÍL / KÉSH DÉSK", img:"cashier checkout counter"},
+{pt:"Pode me fazer um favor?", en:"Could you do me a favour?", pron:"CÚD IÚ DÚ MÍ A FÊIVÂR?", img:"friend asking favor"},
+{pt:"Pode me mostrar?", en:"Can you show me?", pron:"KÉN IÚ XÔU MÍ?", img:"person showing directions"},
+{pt:"Como?", en:"How?", pron:"RÁU?", img:"question confused person"}
+];
+
+let currentIndex = -1;
+
+function render(){
+    const area = document.getElementById("phrases");
+    area.innerHTML = "";
+
+    phrases.forEach((p,i)=>{
+        if(p.category){
+            const cat = document.createElement("div");
+            cat.className = "category";
+            cat.textContent = p.category;
+            area.appendChild(cat);
+            return;
+        }
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.id = "card-" + i;
+        card.innerHTML = `
+            <div class="portuguese">${p.pt}</div>
+            <div class="english">${p.en}</div>
+            <div class="pronunciation">${p.pron}</div>
+            <button onclick="speakPhrase(${i})">🔊 Ouvir</button>
+        `;
+        area.appendChild(card);
+    });
+}
+
+function getRate(){
+    return parseFloat(document.getElementById("speed").value);
+}
+
+function showSpeed(){
+    document.getElementById("speedValue").textContent = getRate().toFixed(1) + "x";
+}
+
+function highlight(i){
+    document.querySelectorAll(".card").forEach(c=>c.classList.remove("active"));
+    const el = document.getElementById("card-"+i);
+    if(el){
+        el.classList.add("active");
+        el.scrollIntoView({behavior:"smooth",block:"center"});
+    }
+}
+
+function showPhraseImage(i){
+    const p = phrases[i];
+    if(!p || p.category) return;
+
+    const viewer = document.getElementById("imageViewer");
+    const img = document.getElementById("phraseImage");
+    const caption = document.getElementById("imageCaption");
+    const translation = document.getElementById("imageTranslation");
+
+    img.src = "https://source.unsplash.com/900x520/?" + encodeURIComponent(p.img) + "&sig=" + i + "&t=" + Date.now();
+    img.alt = p.pt;
+    caption.textContent = p.en;
+    translation.textContent = p.pt;
+    viewer.classList.add("show");
+
+    img.onerror = function(){
+        this.onerror = null;
+        this.src = "https://placehold.co/900x520/e8edf7/1e2b57?text=" + encodeURIComponent(p.pt);
+    };
+}
+
+function speakPhrase(i){
+    if(phrases[i].category) return;
+
+    speechSynthesis.cancel();
+    highlight(i);
+    showPhraseImage(i);
+
+    const u = new SpeechSynthesisUtterance(phrases[i].en);
+    u.lang = "en-US";
+    u.rate = getRate();
+    u.pitch = 1;
+
+    document.getElementById("status").textContent = "🔊 Ouvindo: " + phrases[i].en;
+
+    u.onend = ()=>{
+        document.getElementById("status").textContent = "🎤 Agora repita: " + phrases[i].en;
+    };
+
+    speechSynthesis.speak(u);
+}
+
+function validIndexes(){
+    return phrases.map((p,i)=>p.category ? null : i).filter(i=>i!==null);
+}
+
+let sequence = [];
+let sequencePos = 0;
+
+function speakAll(){
+    speechSynthesis.cancel();
+    sequence = validIndexes();
+    sequencePos = 0;
+    speakNext();
+}
+
+function speakNext(){
+    if(sequencePos >= sequence.length){
+        document.getElementById("status").textContent = "✅ Treino concluído!";
+        return;
+    }
+
+    const i = sequence[sequencePos];
+    const p = phrases[i];
+
+    highlight(i);
+    showPhraseImage(i);
+
+    const u = new SpeechSynthesisUtterance(p.en);
+    u.lang = "en-US";
+    u.rate = getRate();
+
+    document.getElementById("status").textContent =
+        `🔊 Frase ${sequencePos+1} de ${sequence.length}: ${p.en}`;
+
+    u.onend = ()=>{
+        sequencePos++;
+        setTimeout(speakNext,700);
+    };
+
+    speechSynthesis.speak(u);
+}
+
+function stopSpeech(){
+    speechSynthesis.cancel();
+    sequencePos = sequence.length;
+    document.querySelectorAll(".card").forEach(c=>c.classList.remove("active"));
+    document.getElementById("status").textContent = "⏹ Narração parada.";
+}
+
+render();
+showSpeed();
+</script>
+
+</body>
+</html>
