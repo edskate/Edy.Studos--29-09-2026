@@ -1100,6 +1100,54 @@
                             "actionType": "Idle"
                         }
                     ]
+                },
+                {
+                    "date": "Fri Oct 02 2026",
+                    "sessions": [
+                        {
+                            "sessionInfo": {
+                                "id": "30af0678-3fad-47c5-a48c-8b02a65f78e2",
+                                "duration": 135290,
+                                "idle": 8390730,
+                                "state": "Idle",
+                                "durations": [
+                                    {
+                                        "id": "153d67fc-e599-4f95-af79-7e7f7846efb1",
+                                        "state": "Idle",
+                                        "begin": 1790951053514,
+                                        "end": 1790951053514,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "f7d9fe3e-6e6f-4c71-8728-709537370cc9",
+                                        "state": "Ongoing",
+                                        "begin": 1790950918244,
+                                        "end": 1790951053514,
+                                        "duration": 135270
+                                    },
+                                    {
+                                        "id": "ced77390-5f3a-4de0-8cea-045922f39cdb",
+                                        "state": "Idle",
+                                        "begin": 1790950917965,
+                                        "end": 1790950918244,
+                                        "duration": 279
+                                    },
+                                    {
+                                        "id": "dc187d30-2809-42ef-842f-295da1d022fc",
+                                        "state": "Ongoing",
+                                        "begin": 1790950917945,
+                                        "end": 1790950917965,
+                                        "duration": 20
+                                    }
+                                ],
+                                "filesExt": [
+                                    "\\Untitled-1",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page6.html"
+                                ]
+                            },
+                            "actionType": "Idle"
+                        }
+                    ]
                 }
             ]
         }
