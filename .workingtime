@@ -1148,6 +1148,99 @@
                             "actionType": "Idle"
                         }
                     ]
+                },
+                {
+                    "date": "Sun Oct 04 2026",
+                    "sessions": [
+                        {
+                            "sessionInfo": {
+                                "id": "6a2af9d0-b40f-47f5-8fcf-c7c888472867",
+                                "duration": 433892,
+                                "idle": 536142,
+                                "state": "Ended",
+                                "durations": [
+                                    {
+                                        "id": "de57d568-44cb-49c0-92f0-f13e43cc7b3b",
+                                        "state": "Ongoing",
+                                        "begin": 1791161897594,
+                                        "end": 1791161898428,
+                                        "duration": 834
+                                    },
+                                    {
+                                        "id": "682a709c-166d-48ed-b4ce-4484100e4aab",
+                                        "state": "Idle",
+                                        "begin": 1791161834269,
+                                        "end": 1791161897594,
+                                        "duration": 63325
+                                    },
+                                    {
+                                        "id": "d099c7c5-bba8-48eb-a010-d1df5d4ce7bf",
+                                        "state": "Ongoing",
+                                        "begin": 1791161606311,
+                                        "end": 1791161834269,
+                                        "duration": 227958
+                                    },
+                                    {
+                                        "id": "c1698850-6c21-4d4f-bfc5-c05adf9bdd4d",
+                                        "state": "Idle",
+                                        "begin": 1791161605578,
+                                        "end": 1791161606311,
+                                        "duration": 733
+                                    },
+                                    {
+                                        "id": "337987e2-901b-4966-9eae-addc3845ba1a",
+                                        "state": "Ongoing",
+                                        "begin": 1791161418469,
+                                        "end": 1791161605578,
+                                        "duration": 187109
+                                    },
+                                    {
+                                        "id": "d64e4cf3-cc15-4d69-9018-ddaa95dfbd76",
+                                        "state": "Idle",
+                                        "begin": 1791161380277,
+                                        "end": 1791161418469,
+                                        "duration": 38192
+                                    },
+                                    {
+                                        "id": "562902fa-b1ce-46b5-b053-870f8661f9f3",
+                                        "state": "Ongoing",
+                                        "begin": 1791161361452,
+                                        "end": 1791161380277,
+                                        "duration": 18825
+                                    }
+                                ],
+                                "filesExt": [
+                                    "",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page6.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index07.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\pronuncia_ingles_narracao.html"
+                                ]
+                            },
+                            "actionType": "Codding"
+                        },
+                        {
+                            "sessionInfo": {
+                                "id": "b0b73b4e-98df-4c2a-8813-8932aa62a01d",
+                                "duration": 45465,
+                                "idle": 45465,
+                                "state": "Ongoing",
+                                "durations": [
+                                    {
+                                        "id": "21df48bd-6169-427a-b3a9-8d0e7dfeee5d",
+                                        "state": "Ongoing",
+                                        "begin": 1791162160121,
+                                        "end": 1791162160121,
+                                        "duration": 0
+                                    }
+                                ],
+                                "filesExt": [
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index07.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\pronuncia_ingles_com_fotos.html"
+                                ]
+                            },
+                            "actionType": "Codding"
+                        }
+                    ]
                 }
             ]
         }

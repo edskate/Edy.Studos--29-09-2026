@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pronúncia em Inglês</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef2f7;color:#1f2937}
+header{background:#1e2b57;color:#fff;padding:24px 16px;text-align:center}
+header h1{margin:0 0 8px;font-size:clamp(28px,5vw,42px)}
+.container{max-width:1100px;margin:24px auto;padding:0 16px 40px}
+.controls{background:#fff;border-radius:16px;padding:16px;margin-bottom:20px;box-shadow:0 5px 18px rgba(0,0,0,.08)}
+.controls-row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+button{border:none;border-radius:10px;padding:11px 15px;font-weight:bold;cursor:pointer;background:#243b7b;color:#fff}
+button:hover{filter:brightness(1.12)}
+.stop{background:#b91c1c}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{background:#fff;border-radius:16px;padding:18px;box-shadow:0 5px 18px rgba(0,0,0,.08);border-left:6px solid #263c7a}
+.english{font-size:24px;font-weight:bold;color:#152657;margin-bottom:8px}
+.pronunciation{font-size:20px;color:#c2410c;font-style:italic;margin-bottom:8px}
+.translation{font-size:18px;color:#374151;margin-bottom:14px}
+.status{margin-top:14px;padding:10px;border-radius:10px;background:#eef2ff;font-weight:bold}
+.active{outline:3px solid #22c55e}
+@media(max-width:760px){.grid{grid-template-columns:1fr}}
+@media print{.controls,button{display:none!important}.card{box-shadow:none;border:1px solid #ccc}body{background:#fff}}
+</style>
+</head>
+<body>
+<header>
+<h1>Pronúncia em Inglês</h1>
+<p>Ouça, repita e pratique cada frase.</p>
+</header>
+
+<main class="container">
+<section class="controls">
+<div class="controls-row">
+<button onclick="speakAll()">🔊 Ouvir tudo</button>
+<button class="stop" onclick="stopSpeech()">⏹ Parar</button>
+<button onclick="window.print()">🖨 Salvar em PDF</button>
+<label>Velocidade:</label>
+<input id="speed" type="range" min="0.5" max="1.2" step="0.1" value="0.8" oninput="showSpeed()">
+<span id="speedValue">0.8x</span>
+</div>
+<div class="status" id="status">Clique em “Ouvir” e repita a frase.</div>
+</section>
+
+<section class="grid" id="phrases"></section>
+</main>
+
+<script>
+const phrases = [
+["Good morning","GUD MÓR-NIN","Bom dia"],
+["Hello!","RÊ-LÔU","Oi!"],
+["Goodbye","GUD-BÁI","Adeus / Tchau"],
+["Do you speak English?","DU IÚ SPÍK ÍN-GLISH?","Você fala inglês?"],
+["Please speak slowly","PLÍZ SPÍK SLÔU-LI","Por favor, fale devagar."],
+["I don't understand","AI DÔUNT ÂNDER-STÉND","Eu não entendo."],
+["How are you?","RÁU AR IÚ?","Como você está?"],
+["Fine, thanks!","FÁIN, THÉNKS!","Bem, obrigado!"],
+["I'd like...","ÁID LÁIK...","Eu gostaria de... / Quero..."],
+["Pardon?","PÁR-DON?","Desculpe? / O que disse?"],
+["Where are the toilets?","UÉR AR DÂ TÓI-LETS?","Onde ficam os banheiros?"],
+["May I use the phone?","MÊI AI IÚZ DÂ FÔUN?","Posso usar o telefone?"],
+["When does the train arrive?","UÉN DÂZ DÂ TRÊIN ARRÁIV?","Quando o trem chega?"],
+["Where is it?","UÉR IZ IT?","Onde fica?"]
+];
+
+let currentIndex = -1;
+
+function render(){
+  const area=document.getElementById("phrases");
+  area.innerHTML="";
+  phrases.forEach((p,i)=>{
+    const card=document.createElement("div");
+    card.className="card";
+    card.id="card-"+i;
+    card.innerHTML=`
+      <div class="english">${p[0]}</div>
+      <div class="pronunciation">${p[1]}</div>
+      <div class="translation">${p[2]}</div>
+      <button onclick="speakPhrase(${i})">🔊 Ouvir</button>`;
+    area.appendChild(card);
+  });
+}
+
+function getRate(){return parseFloat(document.getElementById("speed").value)}
+function showSpeed(){document.getElementById("speedValue").textContent=getRate().toFixed(1)+"x"}
+
+function highlight(i){
+  document.querySelectorAll(".card").forEach(c=>c.classList.remove("active"));
+  const el=document.getElementById("card-"+i);
+  if(el){el.classList.add("active");el.scrollIntoView({behavior:"smooth",block:"center"})}
+}
+
+function speakPhrase(i){
+  speechSynthesis.cancel();
+  highlight(i);
+  const u=new SpeechSynthesisUtterance(phrases[i][0]);
+  u.lang="en-US";
+  u.rate=getRate();
+  document.getElementById("status").textContent="🔊 Ouvindo: "+phrases[i][0];
+  u.onend=()=>document.getElementById("status").textContent="🎤 Agora repita: "+phrases[i][0];
+  speechSynthesis.speak(u);
+}
+
+function speakAll(){
+  speechSynthesis.cancel();
+  currentIndex=0;
+  speakNext();
+}
+
+function speakNext(){
+  if(currentIndex>=phrases.length){
+    document.getElementById("status").textContent="✅ Treino concluído!";
+    currentIndex=-1;
+    return;
+  }
+  highlight(currentIndex);
+  const text=phrases[currentIndex][0];
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang="en-US";
+  u.rate=getRate();
+  document.getElementById("status").textContent=`🔊 Frase ${currentIndex+1} de ${phrases.length}: ${text}`;
+  u.onend=()=>{currentIndex++;setTimeout(speakNext,700)};
+  speechSynthesis.speak(u);
+}
+
+function stopSpeech(){
+  speechSynthesis.cancel();
+  currentIndex=-1;
+  document.querySelectorAll(".card").forEach(c=>c.classList.remove("active"));
+  document.getElementById("status").textContent="⏹ Narração parada.";
+}
+
+render();
+showSpeed();
+</script>
+<hr>
+<a href="pronuncia_ingles_com_fotos.html"><h2>Pronúncia Inglês com Fotos</h2></a>
+</body>
+</html>
