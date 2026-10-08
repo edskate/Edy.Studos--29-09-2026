@@ -24,7 +24,9 @@
     },
     "data": [
         {
-            "config": false,
+            "config": {
+                "showIdle": false
+            },
             "user": "edskate",
             "dailySessions": [
                 {
@@ -1223,7 +1225,7 @@
                                 "id": "b0b73b4e-98df-4c2a-8813-8932aa62a01d",
                                 "duration": 605279,
                                 "idle": 1845497,
-                                "state": "Idle",
+                                "state": "Ended",
                                 "durations": [
                                     {
                                         "id": "f388efd5-f0b3-4464-9a85-d30111544172",
@@ -1487,6 +1489,77 @@
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page7.html",
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page4.html",
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_ingles_com_fotos.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_ingles_mobile.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_foto_flutuante_mobile.html"
+                                ]
+                            },
+                            "actionType": "Idle"
+                        },
+                        {
+                            "sessionInfo": {
+                                "id": "e9e4acf2-55c1-4d57-866c-b19741536de2",
+                                "duration": 37594,
+                                "idle": 2669263,
+                                "state": "Idle",
+                                "durations": [
+                                    {
+                                        "id": "8fe3d73f-b70b-4bb2-90ab-469bfcf8a9b8",
+                                        "state": "Idle",
+                                        "begin": 1791165134213,
+                                        "end": 1791165134213,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "28e7647a-b325-4257-b8b0-10472943ccff",
+                                        "state": "Ongoing",
+                                        "begin": 1791165130922,
+                                        "end": 1791165134213,
+                                        "duration": 3291
+                                    },
+                                    {
+                                        "id": "ed571e9b-3406-47c7-a3cc-f4817140f599",
+                                        "state": "Idle",
+                                        "begin": 1791164657076,
+                                        "end": 1791165130922,
+                                        "duration": 473846
+                                    },
+                                    {
+                                        "id": "7323125b-0c01-4f8e-8bf4-2758429de782",
+                                        "state": "Ongoing",
+                                        "begin": 1791164652723,
+                                        "end": 1791164657076,
+                                        "duration": 4353
+                                    },
+                                    {
+                                        "id": "d52a0367-fb09-47ca-9227-010432251426",
+                                        "state": "Idle",
+                                        "begin": 1791164412705,
+                                        "end": 1791164652723,
+                                        "duration": 240018
+                                    },
+                                    {
+                                        "id": "7a850eef-ebca-4d1e-a2f4-78cbebac3b3c",
+                                        "state": "Ongoing",
+                                        "begin": 1791164384824,
+                                        "end": 1791164412705,
+                                        "duration": 27881
+                                    },
+                                    {
+                                        "id": "3b910f28-b758-4959-88e7-18cce9feecaf",
+                                        "state": "Idle",
+                                        "begin": 1791164322753,
+                                        "end": 1791164384824,
+                                        "duration": 62071
+                                    },
+                                    {
+                                        "id": "d3f29b69-e40d-4fbf-bf07-ef83eeca3741",
+                                        "state": "Ongoing",
+                                        "begin": 1791164320684,
+                                        "end": 1791164322753,
+                                        "duration": 2069
+                                    }
+                                ],
+                                "filesExt": [
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_ingles_mobile.html",
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_foto_flutuante_mobile.html"
                                 ]
