@@ -24,9 +24,7 @@
     },
     "data": [
         {
-            "config": {
-                "showIdle": false
-            },
+            "config": false,
             "user": "edskate",
             "dailySessions": [
                 {
@@ -1561,6 +1559,70 @@
                                 ],
                                 "filesExt": [
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_ingles_mobile.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_foto_flutuante_mobile.html"
+                                ]
+                            },
+                            "actionType": "Idle"
+                        }
+                    ]
+                },
+                {
+                    "date": "Thu Oct 08 2026",
+                    "sessions": [
+                        {
+                            "sessionInfo": {
+                                "id": "50181cd2-e402-4eee-82f3-0b79767fab89",
+                                "duration": 447228,
+                                "idle": 896498,
+                                "state": "Idle",
+                                "durations": [
+                                    {
+                                        "id": "ee6499cc-d726-464a-ab94-597bcf2d146a",
+                                        "state": "Idle",
+                                        "begin": 1791454999928,
+                                        "end": 1791454999928,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "12df2e78-117a-419f-bf0a-ad334b54f302",
+                                        "state": "Ongoing",
+                                        "begin": 1791454833754,
+                                        "end": 1791454999928,
+                                        "duration": 166174
+                                    },
+                                    {
+                                        "id": "e51938df-1393-433d-8de9-fd2f5743d6bd",
+                                        "state": "Idle",
+                                        "begin": 1791454769784,
+                                        "end": 1791454833754,
+                                        "duration": 63970
+                                    },
+                                    {
+                                        "id": "6fdcd678-2a10-439d-8887-23256251f40b",
+                                        "state": "Ongoing",
+                                        "begin": 1791454491670,
+                                        "end": 1791454769784,
+                                        "duration": 278114
+                                    },
+                                    {
+                                        "id": "036a53c5-273f-4d25-8a5a-e74a783f1224",
+                                        "state": "Idle",
+                                        "begin": 1791454476253,
+                                        "end": 1791454491670,
+                                        "duration": 15417
+                                    },
+                                    {
+                                        "id": "4a1ef9a8-58a2-440d-a7ee-59dff760e2d1",
+                                        "state": "Ongoing",
+                                        "begin": 1791454473313,
+                                        "end": 1791454476253,
+                                        "duration": 2940
+                                    }
+                                ],
+                                "filesExt": [
+                                    "",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index10.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\index_page7.html",
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_foto_flutuante_mobile.html"
                                 ]
                             },
