@@ -1905,6 +1905,97 @@
                             "actionType": "Idle"
                         }
                     ]
+                },
+                {
+                    "date": "Sat Oct 17 2026",
+                    "sessions": [
+                        {
+                            "sessionInfo": {
+                                "id": "5f8aa665-1021-44ea-a165-b586fb9259a6",
+                                "duration": 1078611,
+                                "idle": 1775388,
+                                "state": "Idle",
+                                "durations": [
+                                    {
+                                        "id": "5ee996cc-a15a-430c-8ec8-1b1e508b2231",
+                                        "state": "Idle",
+                                        "begin": 1792235161518,
+                                        "end": 1792235161518,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "9d473b43-eee1-42ce-84e4-839adc433dcd",
+                                        "state": "Ongoing",
+                                        "begin": 1792234863193,
+                                        "end": 1792235161518,
+                                        "duration": 298325
+                                    },
+                                    {
+                                        "id": "ce96ba44-e8fd-4c59-820c-7ac0ed8f6b99",
+                                        "state": "Idle",
+                                        "begin": 1792234861518,
+                                        "end": 1792234863193,
+                                        "duration": 1675
+                                    },
+                                    {
+                                        "id": "bdebeb36-e633-44b6-bb70-4f754a27637c",
+                                        "state": "Ongoing",
+                                        "begin": 1792234564004,
+                                        "end": 1792234861518,
+                                        "duration": 297514
+                                    },
+                                    {
+                                        "id": "7a796254-5595-4ea9-857f-98b3a53122c3",
+                                        "state": "Idle",
+                                        "begin": 1792234561503,
+                                        "end": 1792234564004,
+                                        "duration": 2501
+                                    },
+                                    {
+                                        "id": "bcee838d-b715-44de-85b2-d0d88874aaa8",
+                                        "state": "Ongoing",
+                                        "begin": 1792234359512,
+                                        "end": 1792234561503,
+                                        "duration": 201991
+                                    },
+                                    {
+                                        "id": "7abebc51-4273-4106-b990-6a369cf54e3e",
+                                        "state": "Idle",
+                                        "begin": 1792234261502,
+                                        "end": 1792234359512,
+                                        "duration": 98010
+                                    },
+                                    {
+                                        "id": "0efe6bba-46e5-41a4-8f4e-fc386402065f",
+                                        "state": "Ongoing",
+                                        "begin": 1792234028688,
+                                        "end": 1792234261502,
+                                        "duration": 232814
+                                    },
+                                    {
+                                        "id": "07b663b5-b63f-498e-9db6-c0e6aa84068e",
+                                        "state": "Idle",
+                                        "begin": 1792233434098,
+                                        "end": 1792234028688,
+                                        "duration": 594590
+                                    },
+                                    {
+                                        "id": "e5636319-6460-4cbc-85dc-2977129f5325",
+                                        "state": "Ongoing",
+                                        "begin": 1792233386131,
+                                        "end": 1792233434098,
+                                        "duration": 47967
+                                    }
+                                ],
+                                "filesExt": [
+                                    "",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\pronuncia_ingles_narracao.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\aula_ingles_basico_edy_08_10_2026.html"
+                                ]
+                            },
+                            "actionType": "Idle"
+                        }
+                    ]
                 }
             ]
         }
