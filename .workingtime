@@ -1912,16 +1912,23 @@
                         {
                             "sessionInfo": {
                                 "id": "5f8aa665-1021-44ea-a165-b586fb9259a6",
-                                "duration": 1211424,
-                                "idle": 3575414,
-                                "state": "Ongoing",
+                                "duration": 1211443,
+                                "idle": 57804073,
+                                "state": "Idle",
                                 "durations": [
+                                    {
+                                        "id": "e433fc12-618b-4b62-a26c-1294b0769c75",
+                                        "state": "Idle",
+                                        "begin": 1792236961564,
+                                        "end": 1792236961564,
+                                        "duration": 0
+                                    },
                                     {
                                         "id": "42d46a73-2fe1-45af-8c11-edf5aa1be50c",
                                         "state": "Ongoing",
                                         "begin": 1792236903848,
-                                        "end": 1792236903848,
-                                        "duration": 0
+                                        "end": 1792236961564,
+                                        "duration": 57716
                                     },
                                     {
                                         "id": "56e64210-a7e5-4d19-a0c1-043128bec324",
@@ -2041,10 +2048,311 @@
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\pronuncia_ingles_narracao.html",
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\aula_ingles_basico_edy_08_10_2026.html",
                                     ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\.git\\COMMIT_EDITMSG",
-                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_foto_flutuante_mobile.html"
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_foto_flutuante_mobile.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\pronuncia_ingles_com_fotos.html"
                                 ]
                             },
-                            "actionType": "Codding"
+                            "actionType": "Idle"
+                        }
+                    ]
+                },
+                {
+                    "date": "Sun Oct 18 2026",
+                    "sessions": [
+                        {
+                            "sessionInfo": {
+                                "id": "5f8aa665-1021-44ea-a165-b586fb9259a6",
+                                "duration": 1211443,
+                                "idle": 145040881,
+                                "state": "Idle",
+                                "durations": [
+                                    {
+                                        "id": "e433fc12-618b-4b62-a26c-1294b0769c75",
+                                        "state": "Idle",
+                                        "begin": 1792236961564,
+                                        "end": 1792236961564,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "42d46a73-2fe1-45af-8c11-edf5aa1be50c",
+                                        "state": "Ongoing",
+                                        "begin": 1792236903848,
+                                        "end": 1792236961564,
+                                        "duration": 57716
+                                    },
+                                    {
+                                        "id": "56e64210-a7e5-4d19-a0c1-043128bec324",
+                                        "state": "Idle",
+                                        "begin": 1792236661560,
+                                        "end": 1792236903848,
+                                        "duration": 242288
+                                    },
+                                    {
+                                        "id": "9c442fd3-8806-4c62-8003-599bb97e2ad4",
+                                        "state": "Ongoing",
+                                        "begin": 1792236658129,
+                                        "end": 1792236661560,
+                                        "duration": 3431
+                                    },
+                                    {
+                                        "id": "6a70cc72-93ee-44a7-abce-8646a9c30ba9",
+                                        "state": "Idle",
+                                        "begin": 1792235348876,
+                                        "end": 1792236658129,
+                                        "duration": 1309253
+                                    },
+                                    {
+                                        "id": "48c04b5a-841f-4f96-b63d-fb2c3a3d70d7",
+                                        "state": "Ongoing",
+                                        "begin": 1792235284743,
+                                        "end": 1792235348876,
+                                        "duration": 64133
+                                    },
+                                    {
+                                        "id": "a348450b-78e2-40ba-bd20-13a5c467cc74",
+                                        "state": "Idle",
+                                        "begin": 1792235272233,
+                                        "end": 1792235284743,
+                                        "duration": 12510
+                                    },
+                                    {
+                                        "id": "f8b57a76-f66f-4a6a-b598-d21b8349a15b",
+                                        "state": "Ongoing",
+                                        "begin": 1792235264681,
+                                        "end": 1792235272233,
+                                        "duration": 7552
+                                    },
+                                    {
+                                        "id": "5ee996cc-a15a-430c-8ec8-1b1e508b2231",
+                                        "state": "Idle",
+                                        "begin": 1792235161518,
+                                        "end": 1792235264681,
+                                        "duration": 103163
+                                    },
+                                    {
+                                        "id": "9d473b43-eee1-42ce-84e4-839adc433dcd",
+                                        "state": "Ongoing",
+                                        "begin": 1792234863193,
+                                        "end": 1792235161518,
+                                        "duration": 298325
+                                    },
+                                    {
+                                        "id": "ce96ba44-e8fd-4c59-820c-7ac0ed8f6b99",
+                                        "state": "Idle",
+                                        "begin": 1792234861518,
+                                        "end": 1792234863193,
+                                        "duration": 1675
+                                    },
+                                    {
+                                        "id": "bdebeb36-e633-44b6-bb70-4f754a27637c",
+                                        "state": "Ongoing",
+                                        "begin": 1792234564004,
+                                        "end": 1792234861518,
+                                        "duration": 297514
+                                    },
+                                    {
+                                        "id": "7a796254-5595-4ea9-857f-98b3a53122c3",
+                                        "state": "Idle",
+                                        "begin": 1792234561503,
+                                        "end": 1792234564004,
+                                        "duration": 2501
+                                    },
+                                    {
+                                        "id": "bcee838d-b715-44de-85b2-d0d88874aaa8",
+                                        "state": "Ongoing",
+                                        "begin": 1792234359512,
+                                        "end": 1792234561503,
+                                        "duration": 201991
+                                    },
+                                    {
+                                        "id": "7abebc51-4273-4106-b990-6a369cf54e3e",
+                                        "state": "Idle",
+                                        "begin": 1792234261502,
+                                        "end": 1792234359512,
+                                        "duration": 98010
+                                    },
+                                    {
+                                        "id": "0efe6bba-46e5-41a4-8f4e-fc386402065f",
+                                        "state": "Ongoing",
+                                        "begin": 1792234028688,
+                                        "end": 1792234261502,
+                                        "duration": 232814
+                                    },
+                                    {
+                                        "id": "07b663b5-b63f-498e-9db6-c0e6aa84068e",
+                                        "state": "Idle",
+                                        "begin": 1792233434098,
+                                        "end": 1792234028688,
+                                        "duration": 594590
+                                    },
+                                    {
+                                        "id": "e5636319-6460-4cbc-85dc-2977129f5325",
+                                        "state": "Ongoing",
+                                        "begin": 1792233386131,
+                                        "end": 1792233434098,
+                                        "duration": 47967
+                                    }
+                                ],
+                                "filesExt": [
+                                    "",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\pronuncia_ingles_narracao.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\aula_ingles_basico_edy_08_10_2026.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\.git\\COMMIT_EDITMSG",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_foto_flutuante_mobile.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\pronuncia_ingles_com_fotos.html"
+                                ]
+                            },
+                            "actionType": "Idle"
+                        }
+                    ]
+                },
+                {
+                    "date": "Mon Oct 19 2026",
+                    "sessions": [
+                        {
+                            "sessionInfo": {
+                                "id": "5f8aa665-1021-44ea-a165-b586fb9259a6",
+                                "duration": 1211443,
+                                "idle": 212019520,
+                                "state": "Idle",
+                                "durations": [
+                                    {
+                                        "id": "e433fc12-618b-4b62-a26c-1294b0769c75",
+                                        "state": "Idle",
+                                        "begin": 1792236961564,
+                                        "end": 1792236961564,
+                                        "duration": 0
+                                    },
+                                    {
+                                        "id": "42d46a73-2fe1-45af-8c11-edf5aa1be50c",
+                                        "state": "Ongoing",
+                                        "begin": 1792236903848,
+                                        "end": 1792236961564,
+                                        "duration": 57716
+                                    },
+                                    {
+                                        "id": "56e64210-a7e5-4d19-a0c1-043128bec324",
+                                        "state": "Idle",
+                                        "begin": 1792236661560,
+                                        "end": 1792236903848,
+                                        "duration": 242288
+                                    },
+                                    {
+                                        "id": "9c442fd3-8806-4c62-8003-599bb97e2ad4",
+                                        "state": "Ongoing",
+                                        "begin": 1792236658129,
+                                        "end": 1792236661560,
+                                        "duration": 3431
+                                    },
+                                    {
+                                        "id": "6a70cc72-93ee-44a7-abce-8646a9c30ba9",
+                                        "state": "Idle",
+                                        "begin": 1792235348876,
+                                        "end": 1792236658129,
+                                        "duration": 1309253
+                                    },
+                                    {
+                                        "id": "48c04b5a-841f-4f96-b63d-fb2c3a3d70d7",
+                                        "state": "Ongoing",
+                                        "begin": 1792235284743,
+                                        "end": 1792235348876,
+                                        "duration": 64133
+                                    },
+                                    {
+                                        "id": "a348450b-78e2-40ba-bd20-13a5c467cc74",
+                                        "state": "Idle",
+                                        "begin": 1792235272233,
+                                        "end": 1792235284743,
+                                        "duration": 12510
+                                    },
+                                    {
+                                        "id": "f8b57a76-f66f-4a6a-b598-d21b8349a15b",
+                                        "state": "Ongoing",
+                                        "begin": 1792235264681,
+                                        "end": 1792235272233,
+                                        "duration": 7552
+                                    },
+                                    {
+                                        "id": "5ee996cc-a15a-430c-8ec8-1b1e508b2231",
+                                        "state": "Idle",
+                                        "begin": 1792235161518,
+                                        "end": 1792235264681,
+                                        "duration": 103163
+                                    },
+                                    {
+                                        "id": "9d473b43-eee1-42ce-84e4-839adc433dcd",
+                                        "state": "Ongoing",
+                                        "begin": 1792234863193,
+                                        "end": 1792235161518,
+                                        "duration": 298325
+                                    },
+                                    {
+                                        "id": "ce96ba44-e8fd-4c59-820c-7ac0ed8f6b99",
+                                        "state": "Idle",
+                                        "begin": 1792234861518,
+                                        "end": 1792234863193,
+                                        "duration": 1675
+                                    },
+                                    {
+                                        "id": "bdebeb36-e633-44b6-bb70-4f754a27637c",
+                                        "state": "Ongoing",
+                                        "begin": 1792234564004,
+                                        "end": 1792234861518,
+                                        "duration": 297514
+                                    },
+                                    {
+                                        "id": "7a796254-5595-4ea9-857f-98b3a53122c3",
+                                        "state": "Idle",
+                                        "begin": 1792234561503,
+                                        "end": 1792234564004,
+                                        "duration": 2501
+                                    },
+                                    {
+                                        "id": "bcee838d-b715-44de-85b2-d0d88874aaa8",
+                                        "state": "Ongoing",
+                                        "begin": 1792234359512,
+                                        "end": 1792234561503,
+                                        "duration": 201991
+                                    },
+                                    {
+                                        "id": "7abebc51-4273-4106-b990-6a369cf54e3e",
+                                        "state": "Idle",
+                                        "begin": 1792234261502,
+                                        "end": 1792234359512,
+                                        "duration": 98010
+                                    },
+                                    {
+                                        "id": "0efe6bba-46e5-41a4-8f4e-fc386402065f",
+                                        "state": "Ongoing",
+                                        "begin": 1792234028688,
+                                        "end": 1792234261502,
+                                        "duration": 232814
+                                    },
+                                    {
+                                        "id": "07b663b5-b63f-498e-9db6-c0e6aa84068e",
+                                        "state": "Idle",
+                                        "begin": 1792233434098,
+                                        "end": 1792234028688,
+                                        "duration": 594590
+                                    },
+                                    {
+                                        "id": "e5636319-6460-4cbc-85dc-2977129f5325",
+                                        "state": "Ongoing",
+                                        "begin": 1792233386131,
+                                        "end": 1792233434098,
+                                        "duration": 47967
+                                    }
+                                ],
+                                "filesExt": [
+                                    "",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\pronuncia_ingles_narracao.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\aula_ingles_basico_edy_08_10_2026.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\.git\\COMMIT_EDITMSG",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\expressoes_uteis_foto_flutuante_mobile.html",
+                                    ".Studos -29-09-2026\\Edy.Studos -29-09-2026\\pronuncia_ingles_com_fotos.html"
+                                ]
+                            },
+                            "actionType": "Idle"
                         }
                     ]
                 }
